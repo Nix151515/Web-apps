@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<script>
+setInterval(timer, 500);
+
+function timer() {
+
+    var date = new Date();
+	
+	// Calculating the degrees based on the actual minute/second
+	var s = (date.getSeconds() / 60) * 360 + 180;
+	var m = (date.getMinutes() / 60) * 360 + 180;
+	
+	var hourConvertor = date.getHours();
+	
+	// Translating our from 1-24 to 1-12 
+	if (hourConvertor > 12) {
+		hourConvertor -= 12;
+	} 
+	else 
+		if (hourConvertor === 0) {
+		   hourConvertor = 12;
+		}
+	
+	// Calculating the degrees based on the actual hour
+	var h = (hourConvertor / 12)*360 + 180;
+	
+	// Update the values
+	document.getElementById("seconds").style.transform = "rotate("+s+"deg)";
+	document.getElementById("minutes").style.transform = "rotate("+m+"deg)";
+	document.getElementById("hours").style.transform = "rotate("+h+"deg)";
+	
+	// Digital Clock
+    document.getElementById("realTime").innerHTML = date.toLocaleTimeString();
+	
+
+
+	
+}
+
+
+</script>
+
+<style> 
+#clock {
+	margin: auto;
+	width: 200px;
+	height :200px;
+	border: 3px solid #73AD21;
+}
+
+#hours {
+	width: 7px;
+	height: 70px;
+	background-color: yellow;
+	transform-origin: top;	
+	margin-top : 100px;
+	margin-left : 100px;	
+}
+
+#minutes {
+		position : absolute;
+		width: 6px;
+		height: 80px;
+		background-color: red;
+		transform-origin: top;
+		margin-top : 100px;
+		margin-left : 100px;
+}
+
+#seconds {
+		position : absolute;
+		width: 5px;
+		height: 90px;
+		background-color: purple;
+		transform-origin: top;
+		margin-top : 100px;
+		margin-left : 100px;	
+}
+
+#realTime{
+	text-align : center;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center"> Analogic clock </h1> 
+
+<div id = "clock">
+	<img style= "position:absolute" src = "ceas.png" height="200" width="200">
+	<div id = "seconds" style="font-size:10px"> S </div>
+	<div id = "minutes" style="font-size:10px"> M </div>
+	<div id = "hours" style="font-size:10px"> H </div>
+</div>
+
+<p id="realTime"></p>
+
+</body>
+</html>
