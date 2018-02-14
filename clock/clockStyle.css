@@ -1,0 +1,59 @@
+
+/*  Clock image used  */
+img{
+	position : absolute;
+}
+
+/* The main frame (analogic clock)*/
+#clockA {
+	position: relative;
+	margin : auto;
+	width : 200px;
+	height : 200px;
+	border : 3px solid #73AD21;
+}
+
+/* Hours hand */
+#hours {
+	position : absolute;
+	width: 7px;
+	height: 70px;
+	background-color: yellow;
+	transform-origin: top;	
+	top : 50%;
+	left : 50%;	
+}
+
+/* Minutes hand */
+#minutes {
+	position : absolute;
+	width: 6px;
+	height: 80px;
+	background-color: red;
+	transform-origin: top;
+	top : 50%;
+	left : 50%;		
+}
+
+/* Seconds hand */
+#seconds {
+	position : absolute;
+	width: 5px;
+	height: 90px;
+	background-color: purple;
+	transform-origin: top;
+	top : 50%;
+	left : 50%;	
+}
+
+/* Digital clock */
+#clockD{
+	margin: auto;
+	background-color: black;
+	color : rgb(0, 230, 0);
+	border : 5px solid grey;
+	font-weight: bolder;
+	font-size: 20px;
+	text-align : center;
+	width : 200px;
+}
