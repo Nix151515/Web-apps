@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Calculator </title>
+		<link rel="stylesheet" type="text/css" href="calculatorStyle.css">
+		<script src="calculatorScript.js"></script>
+	</head>
+	<body>
+		<h1 style = "text-align:center"> Calculator </h1>
+		<div>
+			<input type="text" id="screen" placeholder="0">
+			<button onclick="erase()" class="operand"> CE </button>
+			<button onclick="show('7')"> 7 </button>
+			<button onclick="show('8')"> 8 </button>
+			<button onclick="show('9')"> 9 </button>
+			<button onclick="show('/')" class="operand"> / </button>
+			<button onclick="show('4')"> 4 </button>
+			<button onclick="show('5')"> 5 </button>
+			<button onclick="show('6')"> 6 </button>
+			<button onclick="show('*')" class="operand"> * </button>
+			<button onclick="show('1')"> 1 </button>
+			<button onclick="show('2')"> 2 </button>
+			<button onclick="show('3')"> 3 </button>
+			<button onclick="show('-')" class="operand"> - </button>
+			<button onclick="show('0')"> 0 </button>
+			<button onclick="show('.')"> . </button>
+			<button onclick="result()" id="equal"> = </button>
+			<button onclick="show('+')" class="operand"> + </button>	
+		</div>
+	</body>
+</html>
