@@ -1,0 +1,16 @@
+#snakeHead{
+	width:40px;
+	height:40px;
+	background-color: lightblue;
+	position : absolute;
+	transform-origin: top;
+	text-align : center;
+}
+#food{
+	width:10px;
+	height:10px;
+	background-color: green;
+	position : absolute;
+	transform-origin: top;
+	text-align : center;
+}
